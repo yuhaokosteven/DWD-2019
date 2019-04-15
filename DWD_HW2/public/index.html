@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Thesis Doc.</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  body {
+    font-family: "Lato", sans-serif;
+
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .row {
+    position: absolute;
+    /* margin: auto; */
+    left: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100 4px;
+    width: 100%;
+  }
+
+  .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+  }
+
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+
+  .mySlides {
+    display: none
+  }
+</style>
+
+<body>
+
+  <!-- Page content -->
+  <div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+    <!-- Automatic Slideshow Images -->
+    <div class="mySlides w3-display-container w3-center">
+      <img src="/img/top.png" style="width:100%;">
+      <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+        <h3>Virtual Community</h3>
+        <p><b>We had the best time sharing stories through Augmented Reality!</b></p>
+      </div>
+    </div>
+
+
+    <!-- The Band Section -->
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+      <h2 class="w3-wide">LifeShare</h2>
+      <p class="w3-opacity"><i>Share Your Depression Story</i></p>
+      <p class="w3-justify">LifeShare is an interactive application that creates a safe Augmented Reality environment that people can get help and help others in Taiwan. For people who are depressed and anxious, this is a place that people can share
+        their experience. Besides, talking and listening to other people with same suffering stories can have peer to peer support connection. This can alleviate the feeling of loneliness. After all, sometimes talking changes everything.
+      </p>
+    </div>
+
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+      <h2 class="w3-wide">Thesis Statement</h2>
+      <p class="w3-justify">I propose an interactive environment that allows young people in Taiwan to share and talk about their depression or anxiety in order to combat stigmas about mental health.
+      </p>
+    </div>
+
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:900px" id="band">
+      <h2 class="w3-wide">Aspects of Depression</h2>
+      <img src="/img/Diagram.png" class="Diagram" alt="Random Name" style="width:100%">
+      <!-- <p class="w3-justify">I propose an interactive environment that allows young people in Taiwan to share and talk about their depression or anxiety in order to combat stigmas about mental health. -->
+      <!-- </p> -->
+    </div>
+
+  </div>
+
+  <!-- Persona div -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:900px" id="band">
+    <h2 class="w3-wide">Persona</h2>
+    <img src="/img/persona.png" class="Diagram" alt="Random Name" style="width:100%">
+  </div>
+
+  <!-- Imgage Collage -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:900px">
+    <h2 class="w3-wide">Reference</h2>
+    <div class="row">
+      <div class="column">
+        <img src="/img/1.png" style="width:100%">
+        <img src="/img/2.jpg" style="width:100%">
+        <img src="/img/3.jpg" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="/img/4.jpg" style="width:100%">
+        <img src="/img/5.jpg" style="width:100%">
+        <img src="/img/6.jpg" style="width:100%">
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  <script>
+    // Automatic Slideshow - change image every 4 seconds
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {
+        myIndex = 1
+      }
+      x[myIndex - 1].style.display = "block";
+      setTimeout(carousel, 4000);
+    }
+
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    var modal = document.getElementById('ticketModal');
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+
+</html>
